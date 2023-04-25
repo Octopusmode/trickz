@@ -6,8 +6,14 @@ avg_mog = np.mean(mog_times)
 avg_knn = np.mean(knn_times)
 
 ### Использование остатка от деления для обнудения индекса при переполнении
+## Иными словами циклическая инкрементация
 max_values = 5
 index = 0
 for i in range(10):
     index = (index + 1) % max_values
     print(index)
+    
+### Возврат нуля если значение отрицательное
+bar = max(0, foo)
+# То же для верхнего предела:
+bar = min(foo, max_value)
