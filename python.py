@@ -43,3 +43,15 @@ y = np.array([4, 5, 6])
 
 # stack arrays by columns
 z = np.column_stack((x, y))
+
+
+### Чтение физических клавиш (без X-сервера)
+from evdev import InputDevice, ecodes, categorize
+ # Найдите путь к вашему клавиатурному устройству
+device = InputDevice('/dev/input/event6')  # замените eventX соответствующим путем к вашему устройству
+ # Читаем события с клавиатуры
+for event in device.read_loop():
+    if event.type == ecodes.EV_KEY:
+        key_event = categorize(event)
+        if key_event.keystate == key_event.key_down:
+            print(f"Нажата клавиша: {key_event.keycode}")
