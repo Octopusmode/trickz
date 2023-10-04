@@ -1,19 +1,6 @@
 ## gstreamer
-sudo apt install libgstreamer1.0-dev \ 
-  libgstreamer-plugins-base1.0-dev \
-  libgstreamer-plugins-bad1.0-dev \
-  gstreamer1.0-plugins-base \
-  gstreamer1.0-plugins-good \
-  gstreamer1.0-plugins-bad \
-  gstreamer1.0-plugins-ugly \
-  gstreamer1.0-libav \
-  gstreamer1.0-tools \
-  gstreamer1.0-x \
-  gstreamer1.0-alsa \
-  gstreamer1.0-gl \
-  gstreamer1.0-gtk3 \
-  gstreamer1.0-qt5 \
-  gstreamer1.0-pulseaudio
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
+gstreamer1.0-libav gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
 
 ## ffmpeg
 sudo apt update -qq && sudo apt-get -y install autoconf automake build-essential cmake git-core libass-dev libfreetype6-dev libgnutls28-dev libsdl2-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev \
