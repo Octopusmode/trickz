@@ -20,7 +20,17 @@ sudo ldconfig -v
 ## Compile Opencv with GStreamer and FFmpeg
 sudo apt install build-essential
 sudo apt install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+
+wget https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compile_tutorial/tar_files/jasper-1.900.1.tar.gz
+tar xzvf jasper-1.900.1.tar.gz
+cd jasper-1.900.1
+./configure --prefix=$DIR/grib2
+make -j 4
+make install
+cd ..
+rm -rf jasper*
+
+sudo apt install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
 git clone https://github.com/opencv/opencv.git
 cd ~/opencv
 mkdir build
