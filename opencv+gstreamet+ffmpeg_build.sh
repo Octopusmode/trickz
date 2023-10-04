@@ -30,7 +30,7 @@ make install
 cd ..
 rm -rf jasper*
 
-sudo apt install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+sudo apt install python3-dev python3-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-dev
 git clone https://github.com/opencv/opencv.git
 cd ~/opencv
 mkdir build
