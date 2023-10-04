@@ -7,13 +7,13 @@ sudo apt update -qq && sudo apt-get -y install autoconf automake build-essential
 libxcb-xfixes0-dev meson ninja-build pkg-config texinfo wget yasm zlib1g-dev
   
 sudo apt install libunistring-dev libaom-dev
-sudo apt-get -y install git make nasm pkg-config libx264-dev libxext-dev
-sudo wget -O ffmpeg-4.4.tar.bz2 "https://www.ffmpeg.org/releases/ffmpeg-4.4.tar.bz2"
-sudo tar -xvf ffmpeg-4.4.tar.bz2
-sudo rm -Rf ffmpeg-4.4.tar.bz2 
-cd /home/nomce/libs/ffmpeg-4.4
+sudo apt -y install git make nasm pkg-config libx264-dev libxext-dev
+sudo wget -O ffmpeg-6.0.tar.bz2 "https://www.ffmpeg.org/releases/ffmpeg-6.0.tar.bz2"
+sudo tar -xvf ffmpeg-6.0.tar.bz2
+sudo rm -Rf ffmpeg-6.0.tar.bz2 
+cd /home/nomce/libs/ffmpeg-6.0
 ./configure --enable-nonfree --enable-gpl --enable-libx264 --enable-zlib
-make -j6
+make -j${nproc}
 sudo make install
 sudo ldconfig -v
 
