@@ -1,2 +1,2 @@
 # trickz
-Tips and tricks
+Basic tips and tricks of program languages
