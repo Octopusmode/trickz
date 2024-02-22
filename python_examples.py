@@ -59,9 +59,7 @@ for event in device.read_loop():
 ### flatten для обычного списка через sum
 # Исходный двумерный список
 list_2d = [[2, 7]]
-
 # Преобразование в одномерный список
 list_1d = sum(list_2d, [])
-
 print(list_1d)  # Вывод: [2, 7]
 
