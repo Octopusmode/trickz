@@ -56,6 +56,7 @@ for event in device.read_loop():
         if key_event.keystate == key_event.key_down:
             print(f"Нажата клавиша: {key_event.keycode}")
 
+
 ### flatten для обычного списка через sum
 # Исходный двумерный список
 list_2d = [[2, 7]]
