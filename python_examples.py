@@ -64,3 +64,16 @@ list_2d = [[2, 7]]
 list_1d = sum(list_2d, [])
 print(list_1d)  # Вывод: [2, 7]
 
+### Декоратор для тайминга функции
+def time_tracker(func):
+    """Декоратор для измерения скорости работы декорируемой функции."""
+
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        func(*args, **kwargs)
+        end = time.time() - start
+
+        print(f'Функция {func.__name__} отработала за {end} секунд.')
+
+    return wrapper
+
